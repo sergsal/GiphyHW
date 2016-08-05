@@ -87,15 +87,23 @@ function animateImg () {
 // to record value input in text box after submit button has been clicked
 $('#addCar').on('click', function(){
 
-	// grab value of user input
+	// grab value of user input and display only if value is input
 	var inputCar = $('#car-input').val().trim();
-
-	//add value to array
-	topics.push(inputCar);
+	//console.log(inputCar);
+	if (topics.indexOf(inputCar) == -1) {
+		if (inputCar == "") {
+		return false;
+		} else {
+		//add value to array
+		topics.push(inputCar);
 	
-	// to redisplay the buttons
-	renderButtons();
-	$("#car-form")[0].reset()
+		// to redisplay the buttons
+		renderButtons();
+		$("#car-form")[0].reset()
+		}
+	} else {
+		return false;
+	}
 	return false;
 	});
 
