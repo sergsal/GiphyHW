@@ -1,0 +1,17 @@
+.car {
+	margin: 2px 3px;
+}
+.carDiv {
+	float: left;
+	margin: 5px 5px;
+}
+.container {
+	width: 99%;
+}
+body {
+	background-image: url('../images/background.jpg');
+	color: #f2eee8;
+}
+#addCar {
+	margin-top: 7px;
+}
